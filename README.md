@@ -1,29 +1,7 @@
-# presentacion
+# Presentación / Presentation
 
-This template should help get you started developing with Vue 3 in Vite.
+Este es el codigo de mi página de presentación. En el se pueden ver mis abilidades con Vue.js, JavaScript, Html y Css. / This is the code of my presentation page. Here, you can look my abilities with Vue.js, JavaScript, Html and Css.
 
-## Recommended IDE Setup
+## Codigo / Source
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Este repositorio es de codigo abierto y no libre, con lo cual no debe ser usado para lucrarse con el sin mi consentimiento. / This repository is open source and not free, so it should not be used for profit without my consent.

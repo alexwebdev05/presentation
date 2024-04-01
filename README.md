@@ -1,6 +1,6 @@
 # Presentación / Presentation
 
-Este es el codigo de mi página de presentación. En el se pueden ver mis abilidades con Vue.js, JavaScript, Html y Css. / This is the code of my presentation page. Here, you can look my abilities with Vue.js, JavaScript, Html and Css.
+Este es el codigo de mi página de presentación. En el se pueden ver mis abilidades con Vue.js, JavaScript, Html y Css. / This is the code of my presentation page. Here, you can see my abilities with Vue.js, JavaScript, Html and Css.
 
 ## Codigo / Source
 

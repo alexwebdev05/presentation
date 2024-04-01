@@ -1,0 +1,91 @@
+.title1 {
+    position: relative;
+    color: white;
+    font-size: 3rem;
+    cursor: default;
+  }
+
+.title2 {
+    position: relative;
+    color: white;
+    font-size: 1.7rem;
+    width: fit-content;
+    cursor: default;
+}
+
+.text1 {
+    font-size: 1.2rem;
+    color: white;
+    font-style: none;
+    cursor: default;
+}
+
+.text2 {
+    font-size: 1rem;
+    color: white;
+    cursor: default;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    margin-bottom: 1.5rem;
+}
+
+.shadowed-left {
+    filter: drop-shadow(-6px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+
+    border-radius: 1rem;
+    background: linear-gradient(20deg, rgb(0, 17, 255), rgb(184, 0, 201));
+}
+
+.underline2 {
+    margin-bottom: 1.5rem;
+}
+
+.underline2::after {
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+
+    border-radius: 1rem;
+    background: linear-gradient(20deg, rgb(0, 17, 255), rgb(184, 0, 201));
+}
+
+.margin-top {
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 920px) {
+
+    .title1 {
+        font-size: 2rem;
+      }
+    
+    .title2 {
+        font-size: 1.2rem;
+    }
+    
+    .text1 {
+        font-size: 1rem;
+    }
+    
+    .text2 {
+        font-size: 0.8rem;
+    }
+
+}

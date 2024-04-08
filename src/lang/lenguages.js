@@ -4,7 +4,7 @@ export const messages = {
   es: {
     home: {
       greeting: "¡Hola! Soy Álex",
-      specialization: "<Administrador de sistemas en red/>",
+      specialization: "{'<'}Administrador de sistemas en red{'/>'}",
       beautifullText: "El mundo de la informática y todo su alrededor desprende una cantidad de posibilidades inimaginables con las cuales se pueden hacer cosas increíbles.",
       img: images.PersonalPhoto,
       cv: "Descargar CV",
@@ -41,7 +41,7 @@ export const messages = {
       },
       mail: {
         name: "Email",
-        contName: 'sniffsec@proton.me',
+        contName: "sniffsec{'@'}proton.me",
         img: images.mailLogo
       }
     },
@@ -65,31 +65,31 @@ export const messages = {
   en: {
     home: {
       greeting: "¡Hello! I'm Álex",
-      specialization: "<Administrador de sistemas en red/>",
-      beautifullText: "El mundo de la informática y todo su alrededor desprende una cantidad de posibilidades inimaginables con las cuales se pueden hacer cosas increíbles.",
+      specialization: "{'<'}Network systems administrator{'/>'}",
+      beautifullText: "The world of computing and all it deteaches infinite posivilities which can do incredible things.",
       img: images.PersonalPhoto,
-      cv: "Descargar CV",
-      aboutMeTitle: "Sobre mí",
-      aboutMeText: "Soy un estudiante de ASIR al que le apasiona el desarrollo web, ya que es un ámbito en el que se pueden crear obras visuales espectaculares. Además, al estar estudiando en ASIR, tengo una buena base en el desarrollo de servidores. Por último, soy una persona a la que le gusta investigar sobre Linux y el pentesting."
+      cv: "Download CV",
+      aboutMeTitle: "About me",
+      aboutMeText: "I'm student of network systems administration who apassionate wev development, because is posible make expectacular visual things. Beside, studying network systems administration, i have good base on database developement. Finally, i like investigate about linux and pentesting."
     },
     knowledges: {
-      title: "Conocimientos",
+      title: "Knowledges",
       part1: {
-        title: 'Desarrollo web',
+        title: 'Web development',
         text: 'El desarrollo web es mi punto fuerte ya que es mi apartado favorito de la informática. Tengo conocimientos sólidos en HTML y CSS, y conocimientos intermedios en JavaScript y Vue.js.'
       },
       part2: {
-        title: 'Redes y sistemas',
+        title: 'Networks and systems',
         text: 'Tengo la capacidad de hacer bases de datos en MySQL, MongoDB y Oracle ya sea en local como en la nube con AWS. También sé diseñar y hacer la red de ordenadores para una empresa pequeña.'
       },
       part3: {
-        title: 'Artes gráficas',
+        title: 'Art of design',
         text: 'Cursé un grado medio de Preimpresión, el cual me ha dado experiencia en el área del diseño y la manera de tratar las imágenes e impresiones. De esta manera, tengo la ventaja de poder hacer diseños atractivos para mis páginas web.',
         img: images.part3Img
       }
     },
     contact: {
-      title: 'Contacto',
+      title: 'Contact',
       linkedin: {
         name: "Linkedin",
         contName: 'Álex Frías Angulo',
@@ -102,12 +102,12 @@ export const messages = {
       },
       mail: {
         name: "Email",
-        contName: 'sniffsec@proton.me',
+        contName: "sniffsec{'@'}proton.me",
         img: images.mailLogo
       }
     },
     footer: {
-      text: 'Esta página ha sido creada completamente por mí. El código de la misma es abierto y se puede encontrar en mi GitHub.'
+      text: 'This page was made all by me. The code is open and is able on my Github'
     },
     sliderContent: {
       slider1: [

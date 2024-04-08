@@ -44,23 +44,18 @@ export const components = {
     langCollection: langCollection
 }
 
-// Lenguage
-// var lang
-// var boolean
-// function callLang() {
-//     var boton = document.getElementById('lang')
-//     lang = boton.innerHTML
-//     console.log(lang)
-// }
-// var repeatCall = setInterval(callLang, 100)
-// repeatCall
-
-// if (lang == 'esp') {
-//     boolean = false
-// } else {
-//     boolean = true
-// }
-
-export var langOption = {
-    esp: true
+// Slider content
+export const sliderContent = {
+    slider1: [
+        { name: 'Js', img: images.js },
+        { name: 'Vue', img: images.vue },
+        { name: 'Html', img: images.html },
+        { name: 'Css', img: images.css }
+    ],
+    slider2: [
+        { name: 'Mongo', img: images.mongodb },
+        { name: 'Node', img: images.node },
+        { name: 'MySQL', img: images.mysql },
+        { name: 'Oracle', img: images.oracle }
+    ]
 }

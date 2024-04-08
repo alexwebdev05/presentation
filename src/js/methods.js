@@ -3,9 +3,8 @@ export function scrollKnowledge() {
     knowledge.scrollIntoView({ behavior: 'smooth' })
 }
 
-import { langData } from '../lang/esp-eng'
 export function copy() {
-    navigator.clipboard.writeText(langData.contact.mail.contName)
+    navigator.clipboard.writeText('sniffsec@proton.me')
 }
 
 import axios from 'axios';

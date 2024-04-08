@@ -64,23 +64,23 @@
           <h1 class="title2 underline2" v-t="'knowledges.part1.title'"></h1>
           <p class="text2" v-t="'knowledges.part1.text'"></p>
         </divBlue>
-        <sliderBlue :sliderContent="$t('sliderContent.slider1')" class="web-dev-slider-r shadowed-left"></sliderBlue>
+        <sliderBlue :sliderContent="sliderContent.slider1" class="web-dev-slider-r shadowed-left"></sliderBlue>
       </article>
 
       <article id="networks">
-        <sliderBlue :sliderContent="$t('sliderContent.slider2')" class="web-dev-slider-l shadowed-left"></sliderBlue>
+        <sliderBlue :sliderContent="sliderContent.slider2" class="web-dev-slider-l shadowed-left"></sliderBlue>
         <divBlue>
-          <h1 class="title2 underline2"></h1>
-          <p class="text2"></p>
+          <h1 class="title2 underline2" v-t="'knowledges.part2.title'"></h1>
+          <p class="text2" v-t="'knowledges.part2.text'"></p>
         </divBlue>
       </article>
       
       <article id="design">
         <divBlue>
-          <h1 class="title2 underline2"></h1>
-          <p class="text2"></p>
+          <h1 class="title2 underline2" v-t="'knowledges.part3.title'"></h1>
+          <p class="text2" v-t="'knowledges.part3.text'"></p>
         </divBlue>
-        <img :src alt="My design" id="mydesign" class="shadowed-left">
+        <img :src="$t('knowledges.part3.img')" alt="My design" id="mydesign" class="shadowed-left">
       </article>
     </section>
 
@@ -90,25 +90,25 @@
       <div id="final-contact-buttons" class="margin-top">
 
         <section class="cont-sections">
-          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src class="logo"></buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left"></p>
+          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src="$t('contact.linkedin.img')" class="logo"><p v-t="'contact.linkedin.name'"></p></buttonBlue></a>
+          <p class="text2 black-text margin-top shadowed-left" v-t="'contact.linkedin.contName'"></p>
         </section>
           
         <section class="cont-sections">
-          <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src class="logo"></buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left"></p>
+          <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
+          <p class="text2 black-text margin-top shadowed-left" v-t="'contact.github.contName'"></p>
         </section>
 
         <section class="cont-sections">
-          <a @click="copy"><buttonBlue class="text2 black-text"><img :src class="logo"></buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left"></p>
+          <a @click="copy"><buttonBlue class="text2 black-text"><img class="logo" :src="$t('contact.mail.img')"><p v-t="'contact.mail.name'"></p></buttonBlue></a>
+          <p class="text2 black-text margin-top shadowed-left" v-t="'contact.mail.contName'"></p>
         </section>
         
       </div>
     </section>
 
     <!-- Footer -->
-    <footerBlue></footerBlue>
+    <footerBlue v-t="'footer.text'"></footerBlue>
 
   </div>
 </template>
@@ -116,16 +116,20 @@
 <script>
 
 // Objects
-import {components} from './js/modules'
+import { components} from './js/modules'
 
 // Methods
 import { scrollKnowledge, copy, downloadPdf, changeLang } from './js/methods'
+
+// Sliders
+import { sliderContent } from './js/modules'
 
 export default {
   name: 'App',
   data() {
     return {
-      language: this.$i18n.locale
+      language: this.$i18n.locale,
+      sliderContent
     }
   },
   components: {

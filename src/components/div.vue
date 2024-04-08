@@ -1,7 +1,12 @@
 <script>
 
 export default {
-    name: 'DivCollection'
+    name: 'DivCollection',
+    data() {
+        return {
+            language: this.$i18n.locale
+        }
+    }
 }
 
 </script>

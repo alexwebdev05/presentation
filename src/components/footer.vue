@@ -1,7 +1,12 @@
 <script>
 
 export default {
-    name: 'footerCollection'
+    name: 'footerCollection',
+    data() {
+        return {
+            language: this.$i18n.locale
+        }
+    }
 }
 
 </script>

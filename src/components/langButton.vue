@@ -5,8 +5,8 @@ export default {
             esp: true,
             eng: false,
             lenguages: {
-                esp: 'esp',
-                eng: 'eng'
+                esp: 'ES',
+                eng: 'EN'
             }
     }
     },
@@ -60,7 +60,7 @@ export default {
     top: 0.5rem;
     left: 0.5rem;
 
-    width: 5rem;
+    width: 3rem;
     height: 2rem;
     background: linear-gradient(45deg, rgba(3, 49, 201, 0.4), rgba(17, 239, 255, 0.4));
     color: white;

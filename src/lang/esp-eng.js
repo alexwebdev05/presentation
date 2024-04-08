@@ -1,6 +1,6 @@
 // Images
-import { images } from '../js/router'
-import { langOption } from '../js/router'
+import { images } from '../js/modules'
+import { langOption } from '../js/modules'
 
   let langData
   if (langOption.esp == true) {

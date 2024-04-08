@@ -22,14 +22,13 @@ export default {
         }
     },
     computed: {
-            lenguage() {
-                return this.esp ? this.lenguages.esp : this.lenguages.eng;
-            }
+        lenguage() {
+            return this.esp ? this.lenguages.esp : this.lenguages.eng;
         }
+    }
 }
 
 </script>
-
 <template>
     <button id="lang" @click="change">
         {{ lenguage }}

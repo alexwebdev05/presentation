@@ -23,31 +23,31 @@
     </section>
 
     <!-- Lenguage -->
-    <!-- <langBlue></langBlue> -->
+    <langBlue @click="changeLang"></langBlue>
 
     <!-- Home -->
     <section id="home">
       <article id="greeting-presentation-photo-cv">
         <div id="greeting-presentation">
-          <h1 class="title1 underline shadowed-left resp-centered">{{ home.greeting }}</h1>
-          <p class="text1 bold shadowed-left resp-centered">{{ home.specialization }}</p>
-          <p class="text2 margin-top shadowed-left">{{ home.beautifullText }}</p>
+          <h1 class="title1 underline shadowed-left resp-centered" v-t="'home.greeting'"></h1>
+          <p class="text1 bold shadowed-left resp-centered" v-t="'home.specialization'"></p>
+          <p class="text2 margin-top shadowed-left" v-t="'home.beautifullText'"></p>
         </div>
         <div id="photo-cv">
-          <img id="personalPhoto" class="shadowed-left" :src="home.img" alt="">
-          <a href="./assets/media/CV.pdf" download="cv.pdf"><buttonBlue class="text2 black-text">{{ home.cv }}</buttonBlue></a>
+          <img id="personalPhoto" class="shadowed-left" :src="$t('home.img')" alt="">
+          <buttonBlue @click="downloadPdf" class="text2 black-text" v-t="'home.cv'"></buttonBlue>
         </div>
       </article>
 
       <article id="contact-buttons-about-me">
         <div id="contact-buttons">
-          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src="contact.linkedin.img" class="logo">{{ contact.linkedin.name }}</buttonBlue></a>
-          <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="contact.github.img" class="logo">{{ contact.github.name }}</buttonBlue></a>
+          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src="$t('contact.linkedin.img')" class="logo"><p v-t="'contact.linkedin.name'"></p></buttonBlue></a>
+          <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
         </div>
         <div id="about-me">
           <divBlue>
-            <h1 class="title2 underline2">{{ home.aboutMeTitle }}</h1>
-            <p class="text2 margin-top">{{ home.aboutMeText }}</p>
+            <h1 class="title2 underline2" v-t="'home.aboutMeTitle'"></h1>
+            <p class="text2 margin-top" v-t="'home.aboutMeText'"></p>
           </divBlue>
         </div>
       </article>
@@ -58,73 +58,76 @@
 
     <!-- Knowledges -->
     <section id="knowledges">
-      <h1 class="title2 underline2 shadowed-left">{{ knowledges.title }}</h1>
+      <h1 class="title2 underline2 shadowed-left" v-t="'knowledges.title'"></h1>
       <article id="web-dev">
         <divBlue>
-          <h1 class="title2 underline2">{{ knowledges.part1.title }}</h1>
-          <p class="text2">{{ knowledges.part1.text }}</p>
+          <h1 class="title2 underline2" v-t="'knowledges.part1.title'"></h1>
+          <p class="text2" v-t="'knowledges.part1.text'"></p>
         </divBlue>
-        <sliderBlue :sliderContent="sliderContent.slider1" class="web-dev-slider-r shadowed-left"></sliderBlue>
+        <sliderBlue :sliderContent="$t('sliderContent.slider1')" class="web-dev-slider-r shadowed-left"></sliderBlue>
       </article>
 
       <article id="networks">
-        <sliderBlue :sliderContent="sliderContent.slider2" class="web-dev-slider-l shadowed-left"></sliderBlue>
+        <sliderBlue :sliderContent="$t('sliderContent.slider2')" class="web-dev-slider-l shadowed-left"></sliderBlue>
         <divBlue>
-          <h1 class="title2 underline2">{{ knowledges.part2.title }}</h1>
-          <p class="text2">{{ knowledges.part2.text }}</p>
+          <h1 class="title2 underline2"></h1>
+          <p class="text2"></p>
         </divBlue>
       </article>
       
       <article id="design">
         <divBlue>
-          <h1 class="title2 underline2">{{ knowledges.part3.title }}</h1>
-          <p class="text2">{{ knowledges.part3.text }}</p>
+          <h1 class="title2 underline2"></h1>
+          <p class="text2"></p>
         </divBlue>
-        <img :src="knowledges.part3.img" alt="My design" id="mydesign" class="shadowed-left">
+        <img :src alt="My design" id="mydesign" class="shadowed-left">
       </article>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-      <h1 class="title2 underline2 shadowed-left">{{ contact.title }}</h1>
+      <h1 class="title2 underline2 shadowed-left"></h1>
       <div id="final-contact-buttons" class="margin-top">
 
         <section class="cont-sections">
-          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src="contact.linkedin.img" class="logo">{{ contact.linkedin.name }}</buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left">{{ contact.linkedin.contName }}</p>
+          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src class="logo"></buttonBlue></a>
+          <p class="text2 black-text margin-top shadowed-left"></p>
         </section>
           
         <section class="cont-sections">
-          <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="contact.github.img" class="logo">{{ contact.github.name }}</buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left">{{ contact.github.contName }}</p>
+          <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src class="logo"></buttonBlue></a>
+          <p class="text2 black-text margin-top shadowed-left"></p>
         </section>
 
         <section class="cont-sections">
-          <a @click="copy"><buttonBlue class="text2 black-text"><img :src="contact.mail.img" class="logo">{{ contact.mail.name }}</buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left">{{ contact.mail.contName }}</p>
+          <a @click="copy"><buttonBlue class="text2 black-text"><img :src class="logo"></buttonBlue></a>
+          <p class="text2 black-text margin-top shadowed-left"></p>
         </section>
         
       </div>
     </section>
 
     <!-- Footer -->
-    <footerBlue>{{ footer.text }}</footerBlue>
+    <footerBlue></footerBlue>
 
   </div>
 </template>
 
 <script>
-// Objects
-import {components} from './js/router.js'
 
-// Lenguages
-import { langData } from './lang/esp-eng'
+// Objects
+import {components} from './js/modules'
 
 // Methods
-import { scrollKnowledge, copy } from './js/methods.js'
+import { scrollKnowledge, copy, downloadPdf, changeLang } from './js/methods'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      language: this.$i18n.locale
+    }
+  },
   components: {
     'buttonBlue': components.buttonCollection,
     'divBlue': components.DivCollection,
@@ -132,12 +135,11 @@ export default {
     'footerBlue': components.footerCollection,
     'langBlue': components.langCollection
   },
-  data() {
-    return langData
-  },
   methods: {
     scrollKnowledge,
-    copy
+    copy,
+    downloadPdf,
+    changeLang
   }
 }
 
@@ -181,4 +183,4 @@ a {
   border: 3px solid #272435; /* crea un padding alrededor del thumb */
 }
 
-</style>
+</style>./js/modules.js

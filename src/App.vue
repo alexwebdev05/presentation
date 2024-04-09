@@ -22,8 +22,8 @@
       </div>
     </section>
 
-    <!-- Lenguage -->
-    <langBlue @click="changeLang"></langBlue>
+    <!-- Language -->
+    <langBlue @click="changeLang" style="z-index: 99;"></langBlue>
 
     <!-- Home -->
     <section id="home">

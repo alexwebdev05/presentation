@@ -55,4 +55,10 @@ button:not(:hover) {
     animation: buttonHoverReverse 500ms ease forwards;
 }
 
+@media screen and (max-width: 920px) {
+    button {
+        max-height: 2rem;
+    }
+}
+
 </style>

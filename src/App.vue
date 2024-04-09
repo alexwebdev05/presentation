@@ -178,6 +178,12 @@ a {
   margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 920px) {
+  .logo {
+    height: 1.5rem;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;

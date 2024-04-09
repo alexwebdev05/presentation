@@ -41,6 +41,10 @@ export default {
     #footer {
         font-size: 0.7rem;
     }
+
+    #text {
+        padding: 0 1rem;
+    }
 }
 
 </style>

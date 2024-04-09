@@ -19,7 +19,7 @@ export const messages = {
       },
       part2: {
         title: 'Redes y sistemas',
-        text: 'Tengo la capacidad de hacer bases de datos en MySQL, MongoDB y Oracle ya sea en local como en la nube con AWS. También sé diseñar y hacer la red de ordenadores para una empresa pequeña.'
+        text: 'Tengo la capacidad de hacer bases de datos en MySQL, MongoDB y Oracle ya sea en local como en la nube con AWS. También sé diseñar y hacer la red de ordenadores empresas pequeñas.'
       },
       part3: {
         title: 'Artes gráficas',
@@ -76,15 +76,15 @@ export const messages = {
       title: "Knowledges",
       part1: {
         title: 'Web development',
-        text: 'El desarrollo web es mi punto fuerte ya que es mi apartado favorito de la informática. Tengo conocimientos sólidos en HTML y CSS, y conocimientos intermedios en JavaScript y Vue.js.'
+        text: 'The web development is my main skill becaus y is my favourite parto of computing. I have solid skills with Html and Css, and intermediate knowledge of JavaScript and Vue.js.'
       },
       part2: {
         title: 'Networks and systems',
-        text: 'Tengo la capacidad de hacer bases de datos en MySQL, MongoDB y Oracle ya sea en local como en la nube con AWS. También sé diseñar y hacer la red de ordenadores para una empresa pequeña.'
+        text: 'I know how to make MySQL, MongoDB and Orale databases in local or in loud with AWS. Also i know how to make the network for small companies.'
       },
       part3: {
         title: 'Art of design',
-        text: 'Cursé un grado medio de Preimpresión, el cual me ha dado experiencia en el área del diseño y la manera de tratar las imágenes e impresiones. De esta manera, tengo la ventaja de poder hacer diseños atractivos para mis páginas web.',
+        text: 'I had took a middle grade of digital prepress, which gives me the knowledges about design and how to use the images. It gives me advantage to make atractive designs for mi websites.',
         img: images.part3Img
       }
     },

@@ -65,49 +65,49 @@ export const messages = {
   en: {
     home: {
       greeting: "¡Hello! I'm Álex",
-      specialization: "{'<'}Network systems administrator{'/>'}",
-      beautifullText: "The world of computing and all it deteaches infinite posivilities which can do incredible things.",
+      specialization: "<Network systems administrator/>",
+      beautifulText: "The world of computing and all it entails offers infinite possibilities which can do incredible things.",
       img: images.PersonalPhoto,
       cv: "Download CV",
       aboutMeTitle: "About me",
-      aboutMeText: "I'm student of network systems administration who apassionate wev development, because is posible make expectacular visual things. Beside, studying network systems administration, i have good base on database developement. Finally, i like investigate about linux and pentesting."
+      aboutMeText: "I'm a student of network systems administration who is passionate about web development, because it is possible to make spectacular visual things. Besides, studying network systems administration, I have a good base on database development. Finally, I like to investigate about Linux and pentesting."
     },
     knowledges: {
       title: "Knowledges",
       part1: {
-        title: 'Web development',
-        text: 'The web development is my main skill becaus y is my favourite parto of computing. I have solid skills with Html and Css, and intermediate knowledge of JavaScript and Vue.js.'
+        title: "Web development",
+        text: "Web development is my main skill because it is my favourite part of computing. I have solid skills with Html and Css, and intermediate knowledge of JavaScript and Vue.js."
       },
       part2: {
-        title: 'Networks and systems',
-        text: 'I know how to make MySQL, MongoDB and Orale databases in local or in loud with AWS. Also i know how to make the network for small companies.'
+        title: "Networks and systems",
+        text: "I know how to make MySQL, MongoDB and Oracle databases locally or in the cloud with AWS. Also, I know how to set up the network for small companies."
       },
       part3: {
-        title: 'Art of design',
-        text: 'I had took a middle grade of digital prepress, which gives me the knowledges about design and how to use the images. It gives me advantage to make atractive designs for mi websites.',
+        title: "Art of design",
+        text: "I have taken a middle grade of digital prepress, which gives me the knowledge about design and how to use the images. It gives me an advantage to make attractive designs for my websites.",
         img: images.part3Img
       }
     },
     contact: {
-      title: 'Contact',
+      title: "Contact",
       linkedin: {
         name: "Linkedin",
-        contName: 'Álex Frías Angulo',
+        contName: "Álex Frías Angulo",
         img: images.linkedinLogo
       },
       github: {
         name: "Github",
-        contName: 'Sniffsec',
+        contName: "Sniffsec",
         img: images.githubLogo
       },
       mail: {
         name: "Email",
-        contName: "sniffsec{'@'}proton.me",
+        contName: "sniffsec@proton.me",
         img: images.mailLogo
       }
     },
     footer: {
-      text: 'This page was made all by me. The code is open and is able on my Github'
+      text: "This page was made all by me. The code is open and is available on my Github"
     },
     sliderContent: {
       slider1: [
@@ -123,4 +123,5 @@ export const messages = {
         { name: 'Oracle', img: images.oracle }
       ]}
   }
+
 }

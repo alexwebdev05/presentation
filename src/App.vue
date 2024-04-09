@@ -31,7 +31,7 @@
         <div id="greeting-presentation">
           <h1 class="title1 underline shadowed-left resp-centered" v-t="'home.greeting'"></h1>
           <p class="text1 bold shadowed-left resp-centered" v-t="'home.specialization'"></p>
-          <p class="text2 margin-top shadowed-left" v-t="'home.beautifullText'"></p>
+          <p class="text2 margin-top shadowed-left" v-t="'home.beautifulText'"></p>
         </div>
         <div id="photo-cv">
           <img id="personalPhoto" class="shadowed-left" :src="$t('home.img')" alt="">

@@ -68,6 +68,7 @@ export default {
     border-radius: 0.5rem;
 
     filter: drop-shadow(-6px 10px 5px rgba(0, 0, 0, 0.5));
+    font-weight: bold;
 }
 
 #lang:hover {

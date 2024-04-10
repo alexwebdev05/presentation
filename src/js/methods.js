@@ -11,7 +11,7 @@ import axios from 'axios';
 export function downloadPdf() {
     axios({
         method: 'get',
-        url: '../../public/CV.pdf',
+        url: 'CV.pdf',
         responseType: 'blob'
       })
       .then((response) => {

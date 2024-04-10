@@ -42,6 +42,7 @@ export default {
         width: fit-content;
         font-size: 0.7rem;
         padding: 0 1rem;
+        text-align: center;
     }
 
     #text {

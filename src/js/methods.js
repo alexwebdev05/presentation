@@ -19,6 +19,9 @@ export function downloadPdf() {
         const link = document.createElement('a')
         link.href = url;
         link.setAttribute('download', 'CV.pdf')
+        link.setAttribute("target", "_blank");
+        link.setAttribute("rel", "noopener noreferrer");
+        link.setAttribute("href", url);
         document.body.appendChild(link)
         link.click()
       })

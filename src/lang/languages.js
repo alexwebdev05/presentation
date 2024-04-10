@@ -65,7 +65,7 @@ export const messages = {
   en: {
     home: {
       greeting: "¡Hello! I'm Álex",
-      specialization: "{'<'}IT and network systems administrator'/>'}",
+      specialization: `{'<'}IT and network systems administrator{'/>'}`,
       beautifulText: "The world of computing and all it entails offers infinite possibilities which can do incredible things.",
       img: images.PersonalPhoto,
       cv: "Download CV",

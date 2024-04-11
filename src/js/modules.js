@@ -30,14 +30,12 @@ export const images = {
 }
 
 // Components
-import DivCollection from '../components/div.vue'
 import sliderCollection from "../components/slider.vue"
 import buttonCollection from "../components/button.vue"
 import footerCollection from '../components/footer.vue'
 import langCollection from '../components/langButton.vue'
 
 export const components = {
-    DivCollection: DivCollection,
     sliderCollection: sliderCollection,
     buttonCollection: buttonCollection,
     footerCollection: footerCollection,

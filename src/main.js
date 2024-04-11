@@ -8,10 +8,6 @@ import './assets/contact.scss'
 // interactive bubble
 import './js/bubble.js'
 
-// Images
-// Movement for objects
-//import './js/divPerspective.js'
-
 import i18n from './lang/i18n'
 
 import { createApp } from 'vue'

@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n';
-import { messages } from './lenguages'
+import { messages } from './languages'
  
 const i18n = new createI18n({
     legacy: false,

@@ -105,7 +105,8 @@
     }
 
     #greeting-presentation {
-        width: auto;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .resp-centered {
@@ -114,10 +115,12 @@
 
     #photo-cv {
         flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
     }
 
     #personalPhoto {
-        width: 10rem;
+        width: 7rem;
         margin: 0;
     }
 

@@ -22,8 +22,8 @@
       </div>
     </section>
 
-    <!-- Lenguage -->
-    <langBlue @click="changeLang"></langBlue>
+    <!-- Language -->
+    <langBlue @click="changeLang" style="z-index: 99;"></langBlue>
 
     <!-- Home -->
     <section id="home">
@@ -31,7 +31,7 @@
         <div id="greeting-presentation">
           <h1 class="title1 underline shadowed-left resp-centered" v-t="'home.greeting'"></h1>
           <p class="text1 bold shadowed-left resp-centered" v-t="'home.specialization'"></p>
-          <p class="text2 margin-top shadowed-left" v-t="'home.beautifullText'"></p>
+          <p class="text2 margin-top shadowed-left" v-t="'home.beautifulText'"></p>
         </div>
         <div id="photo-cv">
           <img id="personalPhoto" class="shadowed-left" :src="$t('home.img')" alt="">
@@ -45,10 +45,10 @@
           <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
         </div>
         <div id="about-me">
-          <divBlue>
+          <div id="divRight-content">
             <h1 class="title2 underline2" v-t="'home.aboutMeTitle'"></h1>
             <p class="text2 margin-top" v-t="'home.aboutMeText'"></p>
-          </divBlue>
+          </div>
         </div>
       </article>
       <picture id="next" @click="scrollKnowledge">
@@ -60,26 +60,26 @@
     <section id="knowledges">
       <h1 class="title2 underline2 shadowed-left" v-t="'knowledges.title'"></h1>
       <article id="web-dev">
-        <divBlue>
+        <div id="divRight-content">
           <h1 class="title2 underline2" v-t="'knowledges.part1.title'"></h1>
           <p class="text2" v-t="'knowledges.part1.text'"></p>
-        </divBlue>
+        </div>
         <sliderBlue :sliderContent="sliderContent.slider1" class="web-dev-slider-r shadowed-left"></sliderBlue>
       </article>
 
       <article id="networks">
         <sliderBlue :sliderContent="sliderContent.slider2" class="web-dev-slider-l shadowed-left"></sliderBlue>
-        <divBlue>
+        <div id="divRight-content">
           <h1 class="title2 underline2" v-t="'knowledges.part2.title'"></h1>
           <p class="text2" v-t="'knowledges.part2.text'"></p>
-        </divBlue>
+        </div>
       </article>
       
       <article id="design">
-        <divBlue>
+        <div id="divRight-content">
           <h1 class="title2 underline2" v-t="'knowledges.part3.title'"></h1>
           <p class="text2" v-t="'knowledges.part3.text'"></p>
-        </divBlue>
+        </div>
         <img :src="$t('knowledges.part3.img')" alt="My design" id="mydesign" class="shadowed-left">
       </article>
     </section>
@@ -116,7 +116,7 @@
 <script>
 
 // Objects
-import { components} from './js/modules'
+import { components } from './js/modules'
 
 // Methods
 import { scrollKnowledge, copy, downloadPdf, changeLang } from './js/methods'
@@ -134,7 +134,6 @@ export default {
   },
   components: {
     'buttonBlue': components.buttonCollection,
-    'divBlue': components.DivCollection,
     'sliderBlue': components.sliderCollection,
     'footerBlue': components.footerCollection,
     'langBlue': components.langCollection
@@ -167,9 +166,22 @@ a {
   align-items: center;
 }
 
+#divRight-content {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(45deg, rgba(3, 49, 201, 0.4), rgba(17, 239, 255, 0.4)) ;
+    filter: drop-shadow(-6px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
 .logo {
   height: 2rem;
   margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 920px) {
+  .logo {
+    height: 1.5rem;
+  }
 }
 
 /* Scrollbar */
@@ -187,4 +199,4 @@ a {
   border: 3px solid #272435; /* crea un padding alrededor del thumb */
 }
 
-</style>./js/modules.js
+</style>

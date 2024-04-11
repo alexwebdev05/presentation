@@ -4,7 +4,7 @@ export const messages = {
   es: {
     home: {
       greeting: "¡Hola! Soy Álex",
-      specialization: "{'<'}Administrador de sistemas informaticos y en red{'/>'}",
+      specialization: "{'<'}Administrador de sistemas informáticos y en red{'/>'}",
       beautifulText: "El mundo de la informática y todo su alrededor desprende una cantidad de posibilidades inimaginables con las cuales se pueden hacer cosas increíbles.",
       img: images.PersonalPhoto,
       cv: "Descargar CV",

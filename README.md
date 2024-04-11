@@ -11,8 +11,8 @@ This repository is open source and not free, so it should not be used for profit
 
 ## Iniciar la página en local / Start the page locally
 
-Para iniciar la página en local, se debe ejecutar los siguientes comandos
-To start the page locally, you must run the following commands:
+Para iniciar la página en local, se debe ejecutar los siguientes comandos.
+To start the page locally, you must run the following commands.
 
 npm install
 

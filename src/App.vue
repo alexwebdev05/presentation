@@ -42,7 +42,7 @@
       <article id="contact-buttons-about-me">
         <div id="contact-buttons">
           <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src="$t('contact.linkedin.img')" class="logo"><p v-t="'contact.linkedin.name'"></p></buttonBlue></a>
-          <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
+          <a href="https://github.com/alexwebdev05" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
         </div>
         <div id="about-me">
           <div id="divRight-content">
@@ -95,7 +95,7 @@
         </section>
           
         <section class="cont-sections">
-          <a href="https://github.com/Sniffsec" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
+          <a href="https://github.com/alexwebdev05" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
           <p class="text2 black-text margin-top shadowed-left" v-t="'contact.github.contName'"></p>
         </section>
 

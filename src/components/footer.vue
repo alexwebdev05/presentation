@@ -38,6 +38,10 @@ export default {
 
 @media screen and (max-width: 920px) {
 
+    p {
+        margin: 0 1rem;
+    }
+    
     #footer {
         font-size: 0.7rem;
         text-align: center;

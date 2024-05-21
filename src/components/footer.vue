@@ -40,7 +40,6 @@ export default {
 
     #footer {
         font-size: 0.7rem;
-        padding: 0 1rem;
         text-align: center;
     }
 

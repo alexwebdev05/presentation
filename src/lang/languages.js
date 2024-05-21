@@ -107,7 +107,7 @@ export const messages = {
       }
     },
     footer: {
-      text: "This page was made all by me. The code is open and is available on my Github"
+      text: `This page was made all by me. The code is open and is available on <a href='https://github.com/alexwebdev05/presentation'>my Github</a>`
     },
     sliderContent: {
       slider1: [

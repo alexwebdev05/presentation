@@ -56,6 +56,16 @@
       </picture>
     </section>
 
+    <!-- Projects -->
+     <section id="projects">
+      <h1 class="title2 underline2 shadowed-left" v-t="'projects.title'"></h1>
+      <div>
+        <card :imagePath="projects.project1.path" :imageUrl="projects.project1.url" class="shadowed-left"></card>
+
+      </div>
+      
+     </section>
+
     <!-- Knowledges -->
     <section id="knowledges">
       <h1 class="title2 underline2 shadowed-left" v-t="'knowledges.title'"></h1>
@@ -116,27 +126,30 @@
 <script>
 
 // Objects
-import { components } from './js/modules'
+import { components } from './components/index'
 
 // Methods
 import { scrollKnowledge, copy, downloadPdf, changeLang } from './js/methods'
 
 // Sliders
-import { sliderContent } from './js/modules'
+import { sliderContent } from './components/index'
+import { messages } from './lang/languages';
 
 export default {
   name: 'App',
   data() {
     return {
       language: this.$i18n.locale,
-      sliderContent
+      sliderContent,
+      projects: messages.es.projects
     }
   },
   components: {
-    'buttonBlue': components.buttonCollection,
-    'sliderBlue': components.sliderCollection,
-    'footerBlue': components.footerCollection,
-    'langBlue': components.langCollection
+    buttonBlue: components.buttonCollection,
+    sliderBlue: components.sliderCollection,
+    footerBlue: components.footerCollection,
+    langBlue: components.langCollection,
+    card: components.Card
   },
   methods: {
     scrollKnowledge,

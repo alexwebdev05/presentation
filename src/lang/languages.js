@@ -1,21 +1,29 @@
-import { images } from '../js/modules'
+import { images } from '../components'
 
 export const messages = {
   es: {
     home: {
       greeting: "¡Hola! Soy Álex",
-      specialization: "{'<'}Administrador de sistemas informáticos y en red{'/>'}",
-      beautifulText: "El mundo de la informática y todo su alrededor desprende una cantidad de posibilidades inimaginables con las cuales se pueden hacer cosas increíbles.",
+      specialization: "{'<'}Desarrollo web, cloud, redes y sistemas{'/>'}",
+      beautifulText: "Soy muy trabajador y me esfuerzo mucho para aprender y formarme en la mayor cantidad de areas posibles.",
       img: images.PersonalPhoto,
       cv: "Descargar CV",
       aboutMeTitle: "Sobre mí",
-      aboutMeText: "Soy un estudiante de ASIR al que le apasiona el desarrollo web, ya que es un ámbito en el que se pueden crear obras visuales espectaculares. Además, al estar estudiando en ASIR, tengo una buena base en el desarrollo de servidores. Por último, soy una persona a la que le gusta investigar sobre Linux y el pentesting."
+      aboutMeText: "Soy un estudiante de ASIR al que le apasiona el desarrollo web, ya que siempre me ha gustado crear y diseñar, por ello diseño todas mis webs. Además, al estar estudiando en ASIR, tengo una buena base en el desarrollo de servidores. Por último, soy una persona a la que le gusta investigar sobre Linux y ciberseguridad."
+    },
+    projects: {
+      title: 'Proyectos',
+      project1: {
+        name: '3dForniture',
+        path: 'project1.png',
+        url: 'https://994ca11c.3dforniture.pages.dev/'
+      }
     },
     knowledges: {
       title: "Conocimientos",
       part1: {
         title: 'Desarrollo web',
-        text: 'El desarrollo web es mi punto fuerte ya que es mi apartado favorito de la informática. Tengo conocimientos sólidos en HTML y CSS, y conocimientos intermedios en JavaScript y Vue.js.'
+        text: 'El desarrollo web es mi punto fuerte ya que es mi apartado favorito de la informática. Tengo conocimientos sólidos en Html, Css, JavaScript y me se manejar bien con React, Vue y Three.js para modelos 3D'
       },
       part2: {
         title: 'Redes y sistemas',
@@ -35,18 +43,18 @@ export const messages = {
         img: images.linkedinLogo
       },
       github: {
-        name: "Github",
-        contName: 'Sniffsec',
+        name: "GitHub",
+        contName: 'alexwebdev05',
         img: images.githubLogo
       },
       mail: {
         name: "Email",
-        contName: "sniffsec{'@'}proton.me",
+        contName: "alexwebdeb05{'@'}proton.me",
         img: images.mailLogo
       }
     },
     footer: {
-      text: 'Esta página ha sido creada completamente por mí. El código de la misma es abierto y se puede encontrar en mi GitHub.'
+      text: 'Esta página esta hecha por mi y el código esta publicado en mi GitHub.'
     },
     sliderContent: {
       slider1: [
@@ -65,18 +73,26 @@ export const messages = {
   en: {
     home: {
       greeting: "¡Hello! I'm Álex",
-      specialization: `{'<'}IT and network systems administrator{'/>'}`,
-      beautifulText: "The world of computing and all it entails offers infinite possibilities which can do incredible things.",
+      specialization: `{'<'}Web development, cloud, networks and systems{'/>'}`,
+      beautifulText: "I am very hardworking and I strive a lot to learn and train myself in as many areas as possible.",
       img: images.PersonalPhoto,
       cv: "Download CV",
       aboutMeTitle: "About me",
-      aboutMeText: "I'm a student of network systems administration who is passionate about web development, because it is possible to make spectacular visual things. Besides, studying network systems administration, I have a good base on database development. Finally, I like to investigate about Linux and pentesting."
+      aboutMeText: "I'm a student of network systems administration who is passionate about web development, because I love to create and design. Besides, studying network systems administration, I have a good base on database development. Finally, I like to investigate about Linux and cibersecurity."
+    },
+    projects: {
+      title: 'Projects',
+      project1: {
+        name: '3dForniture',
+        path: '../assets/media/project1.png',
+        url: 'https://994ca11c.3dforniture.pages.dev/'
+      },
     },
     knowledges: {
       title: "Knowledges",
       part1: {
         title: "Web development",
-        text: "Web development is my main skill because it is my favourite part of computing. I have solid skills with Html and Css, and intermediate knowledge of JavaScript and Vue.js."
+        text: "Web development is my main skill because it is my favourite part of computing. I have solid skills with Html Css and JavaScript, and I'm good with React, Vue and Three.js for 3D models."
       },
       part2: {
         title: "Networks and systems",
@@ -96,18 +112,18 @@ export const messages = {
         img: images.linkedinLogo
       },
       github: {
-        name: "Github",
-        contName: "Sniffsec",
+        name: "GitHub",
+        contName: "alexwebdev05",
         img: images.githubLogo
       },
       mail: {
         name: "Email",
-        contName: "sniffsec{'@'}proton.me",
+        contName: "alexwebdev05{'@'}proton.me",
         img: images.mailLogo
       }
     },
     footer: {
-      text: `This page was made all by me. The code is open and is available on my Github`
+      text: `This page was made by me, and the code is in my GitHub.`
     },
     sliderContent: {
       slider1: [

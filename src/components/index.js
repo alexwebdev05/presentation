@@ -30,16 +30,18 @@ export const images = {
 }
 
 // Components
-import sliderCollection from "../components/slider.vue"
-import buttonCollection from "../components/button.vue"
-import footerCollection from '../components/footer.vue'
-import langCollection from '../components/langButton.vue'
+import sliderCollection from "./slider.vue"
+import buttonCollection from "./button.vue"
+import footerCollection from './/footer.vue'
+import langCollection from './langButton.vue'
+import Card from './card.vue'
 
 export const components = {
     sliderCollection: sliderCollection,
     buttonCollection: buttonCollection,
     footerCollection: footerCollection,
-    langCollection: langCollection
+    langCollection: langCollection,
+    Card: Card
 }
 
 // Slider content

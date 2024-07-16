@@ -28,7 +28,7 @@ export default {
     color: white;
 
     width: 100%;
-    height: 4rem;
+    padding: 0.8rem 0;
     background: linear-gradient(45deg, rgba(3, 49, 201, 0.4), rgba(17, 239, 255, 0.4));
 }
 

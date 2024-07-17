@@ -49,26 +49,13 @@ export const messages = {
       },
       mail: {
         name: "Email",
-        contName: "alexwebdeb05{'@'}proton.me",
+        contName: "alexwebdev05{'@'}proton.me",
         img: images.mailLogo
       }
     },
     footer: {
       text: 'Esta página esta hecha por mi y el código esta publicado en mi GitHub.'
     },
-    sliderContent: {
-      slider1: [
-        { name: 'Js', img: images.js },
-        { name: 'Vue', img: images.vue },
-        { name: 'Html', img: images.html },
-        { name: 'Css', img: images.css }
-      ],
-      slider2: [
-        { name: 'Mongo', img: images.mongodb },
-        { name: 'Node', img: images.node },
-        { name: 'MySQL', img: images.mysql },
-        { name: 'Oracle', img: images.oracle }
-      ]}
   },
   en: {
     home: {
@@ -125,19 +112,6 @@ export const messages = {
     footer: {
       text: `This page was made by me, and the code is in my GitHub.`
     },
-    sliderContent: {
-      slider1: [
-        { name: 'Js', img: images.js },
-        { name: 'Vue', img: images.vue },
-        { name: 'Html', img: images.html },
-        { name: 'Css', img: images.css }
-      ],
-      slider2: [
-        { name: 'Mongo', img: images.mongodb },
-        { name: 'Node', img: images.node },
-        { name: 'MySQL', img: images.mysql },
-        { name: 'Oracle', img: images.oracle }
-      ]}
   }
 
 }

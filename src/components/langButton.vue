@@ -37,24 +37,6 @@ export default {
 
 <style lang="scss">
 
-@keyframes buttonHover {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-@keyframes buttonHoverReverse {
-    0% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 #lang {
     position: fixed;
     top: 0.5rem;
@@ -66,17 +48,14 @@ export default {
     color: white;
     border: none;
     border-radius: 0.5rem;
+    transition: transform 0.5s;
 
     filter: drop-shadow(-6px 10px 5px rgba(0, 0, 0, 0.5));
     font-weight: bold;
 }
 
 #lang:hover {
-    animation: buttonHover 500ms ease forwards;
-}
-
-#lang:not(:hover) {
-    animation: buttonHoverReverse 500ms ease forwards;
+    transform: scale(1.04);
 }
 
 </style>

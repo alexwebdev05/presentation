@@ -4,6 +4,7 @@ import githubLogo from "../assets/logos/github.svg"
 import mailLogo from "../assets/logos/mail.svg"
 import js from "../assets/logos/js.svg"
 import vue from "../assets/logos/vue.svg"
+import react from "../assets/logos/react.svg"
 import html from "../assets/logos/html.svg"
 import css from "../assets/logos/css.svg"
 import mongodb from '../assets/logos/mongo.svg'
@@ -19,6 +20,7 @@ export const images = {
     mailLogo: mailLogo,
     js: js,
     vue: vue,
+    react: react,
     html: html,
     css: css,
     mongodb: mongodb,
@@ -47,10 +49,11 @@ export const components = {
 // Slider content
 export const sliderContent = {
     slider1: [
+        { name: 'React', img: images.react },
         { name: 'Js', img: images.js },
-        { name: 'Vue', img: images.vue },
         { name: 'Html', img: images.html },
-        { name: 'Css', img: images.css }
+        { name: 'Vue', img: images.vue }
+        
     ],
     slider2: [
         { name: 'Mongo', img: images.mongodb },

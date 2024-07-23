@@ -1,8 +1,13 @@
 <script>
 
 export default {
-    name: 'sliderCollection',
-    props: ['sliderContent'],
+    name: 'slider',
+    props: {
+        sliderContent: {
+        type: Array,
+        required: true
+        }
+    },
     mounted() {
         this.movement()
     },
@@ -111,6 +116,8 @@ export default {
     border-left: 5px solid rgba(0, 174, 255, 0.6);
     border-right: 5px solid rgba(0, 174, 255, 0.6);
     border-radius: 0.25rem;
+
+    flex: 0.40;
 
     width: 40rem;
 }

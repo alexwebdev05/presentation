@@ -19,6 +19,24 @@ export const messages = {
         url: 'https://994ca11c.3dforniture.pages.dev/'
       }
     },
+    studies: {
+      title: 'Estudios',
+      slot1: {
+        name: 'Educación secundaria',
+        center: 'Uribe-Kosta BHI',
+        date: '2016-2019',
+      },
+      slot2: {
+        name: 'Preimpresión digital',
+        center: 'Emilio Campuzano',
+        date: '2020-2022'
+      },
+      slot3: {
+        name: 'ASIR',
+        center: 'Almi',
+        date: '2023-En curso'
+      }
+    },
     knowledges: {
       title: "Conocimientos",
       part1: {
@@ -40,12 +58,14 @@ export const messages = {
       linkedin: {
         name: "Linkedin",
         contName: 'Álex Frías Angulo',
-        img: images.linkedinLogo
+        img: images.linkedinLogo,
+        url: 'https://linkedin.com/in/álex-frías-angulo-34b1b3271'
       },
       github: {
         name: "GitHub",
         contName: 'alexwebdev05',
-        img: images.githubLogo
+        img: images.githubLogo,
+        url: 'https://github.com/alexwebdev05'
       },
       mail: {
         name: "Email",
@@ -96,12 +116,14 @@ export const messages = {
       linkedin: {
         name: "Linkedin",
         contName: "Álex Frías Angulo",
-        img: images.linkedinLogo
+        img: images.linkedinLogo,
+        url: 'https://linkedin.com/in/álex-frías-angulo-34b1b3271'
       },
       github: {
         name: "GitHub",
         contName: "alexwebdev05",
-        img: images.githubLogo
+        img: images.githubLogo,
+        url: 'https://github.com/alexwebdev05'
       },
       mail: {
         name: "Email",

@@ -1,0 +1,11 @@
+#projContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+#projContainer  div {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,42 @@
+/* Me */
+#meContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  }
+  
+#meContainer article {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+#photoCv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+#personalPhoto {
+    margin: 1rem;
+    width: 15rem;
+    border-radius: 20rem;
+}
+
+#aboutMeContainer {
+    display: flex;
+    align-items: center;
+}
+
+#contact-buttons {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0.45;
+}

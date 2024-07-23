@@ -1,7 +1,7 @@
 <script>
 
     export default {
-        name: "buttonCollection",
+        name: "Button",
     }
 
 </script>
@@ -26,14 +26,11 @@ button {
     padding: 0.4rem 0.6rem;
     cursor: pointer;
     transition: transform 0.5s;
-
-    filter: drop-shadow(-6px 10px 5px rgba(0, 0, 0, 0.5));
 }
 
 button:hover {
     transform: scale(1.04);
 }
-
 
 @media screen and (max-width: 920px) {
     button {

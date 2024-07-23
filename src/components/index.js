@@ -1,18 +1,18 @@
 // Images
-import linkedinLogo from "../assets/logos/linkedin.svg"
-import githubLogo from "../assets/logos/github.svg"
-import mailLogo from "../assets/logos/mail.svg"
-import js from "../assets/logos/js.svg"
-import vue from "../assets/logos/vue.svg"
-import react from "../assets/logos/react.svg"
-import html from "../assets/logos/html.svg"
-import css from "../assets/logos/css.svg"
-import mongodb from '../assets/logos/mongo.svg'
-import node from '../assets/logos/nodejs.svg'
-import mysql from '../assets/logos/mysql.svg'
-import oracle from '../assets/logos/oracle.svg'
-import PersonalPhoto from "../assets/media/photo-web.png"
-import part3Img from '../assets/media/hand.png'
+import linkedinLogo from "/logos/linkedin.svg"
+import githubLogo from "/logos/github.svg"
+import mailLogo from "/logos/mail.svg"
+import js from "/logos/js.svg"
+import vue from "/logos/vue.svg"
+import react from "/logos/react.svg"
+import html from "/logos/html.svg"
+import css from "/logos/css.svg"
+import mongodb from '/logos/mongo.svg'
+import node from '/logos/nodejs.svg'
+import mysql from '/logos/mysql.svg'
+import oracle from '/logos/oracle.svg'
+import PersonalPhoto from "/media/photo-web.png"
+import part3Img from '/media/hand.png'
 
 export const images = {
     linkedinLogo: linkedinLogo,

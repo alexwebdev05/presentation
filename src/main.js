@@ -1,13 +1,8 @@
 // scss
-import './assets/background.scss'
-import './assets/text.scss'
-import './assets/home.scss'
-import './assets/knowledges.scss'
-import './assets/contact.scss'
-import './assets/projects.scss'
 
 // interactive bubble
 import './js/bubble.js'
+import './assets/styles/background.scss'
 
 import i18n from './lang/i18n'
 

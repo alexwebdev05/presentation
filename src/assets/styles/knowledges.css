@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-#knowledgesContent {
+.knowledgesContent {
     margin-top: 2rem;
     margin-bottom: 5rem;
     display: flex;
@@ -13,7 +13,11 @@
 }
 
 #designPhoto {
-    width: 20rem;
+    width: 5rem;
+}
+
+#designPhoto {
+    width: 10rem;
 }
 
 #contact{

@@ -118,8 +118,6 @@ export default {
     border-radius: 0.25rem;
 
     flex: 0.40;
-
-    width: 40rem;
 }
 
 .content {
@@ -153,6 +151,13 @@ export default {
 @media screen and (max-width: 920px) {
     .container {
         width: 20rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        flex: auto;
+        margin: 2rem 0;
     }
 }
 

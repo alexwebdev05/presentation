@@ -1,5 +1,6 @@
 #studiesContainer {
     display: flex;
+    margin-bottom: 4rem;
     flex-direction: column;
     align-items: center;
 }

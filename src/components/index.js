@@ -12,7 +12,10 @@ import node from '/logos/nodejs.svg'
 import mysql from '/logos/mysql.svg'
 import oracle from '/logos/oracle.svg'
 import PersonalPhoto from "/media/photo-web.png"
-import part3Img from '/media/hand.png'
+import photoshop from '/logos/photoshop.svg'
+import illustrator from '/logos/illustrator.svg'
+import indesign from '/logos/indesign.svg'
+import aEffects from '/logos/after-effects.svg'
 
 export const images = {
     linkedinLogo: linkedinLogo,
@@ -28,7 +31,10 @@ export const images = {
     mysql: mysql,
     oracle: oracle,
     PersonalPhoto: PersonalPhoto,
-    part3Img: part3Img
+    photoshop: photoshop,
+    illustrator: illustrator,
+    indesign: indesign,
+    aEffects: aEffects
 }
 
 // Components
@@ -60,5 +66,11 @@ export const sliderContent = {
         { name: 'Node', img: images.node },
         { name: 'MySQL', img: images.mysql },
         { name: 'Oracle', img: images.oracle }
+    ],
+    slider3: [
+        { name: 'Photoshop', img: images.photoshop },
+        { name: 'Illustrator', img: images.illustrator },
+        { name: 'Indesign', img: images.indesign },
+        { name: 'After', img: images.aEffects }
     ]
 }

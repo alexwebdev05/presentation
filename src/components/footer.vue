@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: 'footer',
+    name: 'myFooter',
     data() {
         return {
             language: this.$i18n.locale

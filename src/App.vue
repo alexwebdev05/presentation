@@ -1,10 +1,12 @@
 <script>
+import axios from 'axios';
 
 // Components
+import lButton from './components/langButton.vue'
 import button from './components/button.vue'
 import card from './components/card.vue'
 import slider from './components/slider.vue'
-import footer from './components/footer.vue'
+import myFooter from './components/footer.vue'
 import { sliderContent } from './components/index'
   
 export default {
@@ -16,10 +18,34 @@ export default {
     }
   },
   components: {
+    LButton: lButton,
     Button: button,
     Card: card,
     Slider: slider,
-    Footer: footer
+    MyFooter: myFooter
+  },
+  methods: {
+    downloadPdf() {
+      axios({
+        method: 'get',
+        url: 'CV.pdf',
+        responseType: 'blob'
+      })
+      .then((response) => {
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'CV.pdf');
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }
   }
 }
 
@@ -57,12 +83,15 @@ import './assets/styles/text.css'
         <div class="interactive"></div>
       </div>
     </section>
+
+    <!-- Language -->
+    <LButton></LButton>
     
     <!-- Me -->
     <section id="meContainer">
       <article>
         <div>
-          <h2 v-t="'home.greeting'" class="title"></h2>
+          <h2 v-t="'home.greeting'" class="title phone-center"></h2>
           <h2 v-t="'home.specialization'" class="subtitle"></h2>
           <p v-t="'home.beautifulText'"></p>
         </div>
@@ -106,7 +135,7 @@ import './assets/styles/text.css'
     <!-- Knowledges -->
      <section id="knowledgesContainer">
       <h1 class="title2" v-t="'knowledges.title'"></h1>
-      <div id="knowledgesContent">
+      <div class="knowledgesContent">
         <div class="textContainer">
           <h1 class="title2" v-t="'knowledges.part1.title'"></h1>
           <p v-t="'knowledges.part1.text'"></p>
@@ -114,7 +143,7 @@ import './assets/styles/text.css'
         <Slider :sliderContent="sliderContent.slider1"  class="web-dev-slider-r shadowed-left" />
       </div>
 
-      <div id="knowledgesContent">
+      <div class="knowledgesContent phone-rev">
         <Slider :sliderContent="sliderContent.slider2"  class="web-dev-slider-r shadowed-left" />
         <div class="textContainer">
           <h1 class="title2" v-t="'knowledges.part2.title'"></h1>
@@ -122,12 +151,12 @@ import './assets/styles/text.css'
         </div>
       </div>
 
-      <div id="knowledgesContent">
+      <div class="knowledgesContent">
         <div class="textContainer">
           <h1 class="title2" v-t="'knowledges.part3.title'"></h1>
           <p v-t="'knowledges.part3.text'"></p>
         </div>
-        <img :src="$t('knowledges.part3.img')" alt="My design" id="designPhoto">
+        <Slider :sliderContent="sliderContent.slider3"  class="web-dev-slider-r shadowed-left" />
       </div>
      </section>
 
@@ -153,7 +182,7 @@ import './assets/styles/text.css'
     </section>
 
      <!-- Footer -->
-     <Footer v-t="'footer.text'"></Footer>
+     <MyFooter v-t="'footer.text'"></MyFooter>
 
   </div>
 
@@ -205,7 +234,14 @@ a {
 }
 
 #app {
-  margin: 0 20rem;
+  margin: 0 25rem;
+  display: flex;
+  justify-content: center
+}
+
+#contaier {
+  
+  max-width: 60rem;
 }
 
 /* .content {
@@ -224,6 +260,90 @@ a {
   filter: drop-shadow(-6px 10px 5px var(--shadow));
 
   flex: 0.55;
+}
+/* big screen */
+
+
+/* Small screens */
+@media (max-width: 1450px) {
+  #app {
+    margin: 0 15rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  #app {
+    margin: 0 10rem;
+  }
+}
+
+@media (max-width: 980px) {
+  #app {
+    margin: 0 3rem;
+  }
+}
+
+/* Phone */
+@media (max-width: 750px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .title2 {
+    font-size: 1.5rem;
+  }
+
+  #meContainer article {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .phone-center {
+    width: 100%;
+  }
+
+  #personalPhoto {
+    width: 10rem;
+  }
+
+  #contact-buttons {
+    display: none;
+  }
+
+  #aboutMeContainer {
+    display: contents;
+    justify-content: center
+  }
+
+  .knowledgesContent {
+    flex-direction: column;
+  }
+
+  .phone-rev {
+    flex-direction: column-reverse;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+
+  .margin-top {
+    margin: 0.5rem 0 2rem 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
 }
 
 </style>

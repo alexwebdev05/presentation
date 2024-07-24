@@ -2,6 +2,7 @@ import { images } from '../components'
 
 export const messages = {
   es: {
+    name: 'ES',
     home: {
       greeting: "¡Hola! Soy Álex",
       specialization: "{'<'}Desarrollo web, cloud, redes y sistemas{'/>'}",
@@ -24,12 +25,12 @@ export const messages = {
       slot1: {
         name: 'Educación secundaria',
         center: 'Uribe-Kosta BHI',
-        date: '2016-2019',
+        date: '2017-2021',
       },
       slot2: {
         name: 'Preimpresión digital',
         center: 'Emilio Campuzano',
-        date: '2020-2022'
+        date: '2021-2023'
       },
       slot3: {
         name: 'ASIR',
@@ -78,6 +79,7 @@ export const messages = {
     },
   },
   en: {
+    name: 'EN',
     home: {
       greeting: "¡Hello! I'm Álex",
       specialization: `{'<'}Web development, cloud, networks and systems{'/>'}`,
@@ -91,9 +93,27 @@ export const messages = {
       title: 'Projects',
       project1: {
         name: '3dForniture',
-        path: '../assets/media/project1.png',
+        path: 'project1.png',
         url: 'https://994ca11c.3dforniture.pages.dev/'
+      }
+    },
+    studies: {
+      title: 'Studies',
+      slot1: {
+        name: 'Secundary education',
+        center: 'Uribe-Kosta BHI',
+        date: '2017-2021',
       },
+      slot2: {
+        name: 'Digital prepress',
+        center: 'Emilio Campuzano',
+        date: '2021-2023'
+      },
+      slot3: {
+        name: 'ASIR',
+        center: 'Almi',
+        date: '2023-Studying'
+      }
     },
     knowledges: {
       title: "Knowledges",

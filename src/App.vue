@@ -174,7 +174,7 @@ import './assets/styles/text.css'
         </section>
 
         <section class="cont-sections">
-          <a @click="copy"><Button><img class="logoButton" :src="$t('contact.mail.img')"><p v-t="'contact.mail.name'"></p></Button></a>
+          <a><Button><img class="logoButton" :src="$t('contact.mail.img')"><p v-t="'contact.mail.name'"></p></Button></a>
           <p class="margin-top" v-t="'contact.mail.contName'"></p>
         </section>
         

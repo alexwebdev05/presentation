@@ -20,6 +20,8 @@ Para iniciar la página en local, se debe ejecutar los siguientes comandos.
 
 To start the page locally, you must run the following commands.
 
+```bash
 npm install
 
 npm run dev
+```

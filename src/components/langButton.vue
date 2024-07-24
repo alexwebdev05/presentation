@@ -1,37 +1,28 @@
 <script>
 export default {
-    data() {
-        return {
-            esp: true,
-            eng: false,
-            lenguages: {
-                esp: 'ES',
-                eng: 'EN'
-            }
+  name: 'lButton',
+  data() {
+    return {
+      esp: true
+    };
+  },
+  methods: {
+    change() {
+      this.esp = !this.esp;
+      this.$i18n.locale = this.esp ? 'es' : 'en';
     }
-    },
-    methods: {
-        change() {
-            if (this.esp == true) {
-                this.esp = false
-                this.eng = true
-            } else {
-                this.esp = true
-                this.eng = false
-            }
-        }
-    },
-    computed: {
-        lenguage() {
-            return this.esp ? this.lenguages.esp : this.lenguages.eng;
-        }
+  },
+  computed: {
+    language() {
+      return this.esp ? 'es' : 'en';
     }
-}
-
+  }
+};
 </script>
+
 <template>
     <button id="lang" @click="change">
-        {{ lenguage }}
+        <p v-t="'name'"></p>
     </button>
 </template>
 
@@ -52,6 +43,7 @@ export default {
 
     filter: drop-shadow(-6px 10px 5px rgba(0, 0, 0, 0.5));
     font-weight: bold;
+    z-index: 99;
 }
 
 #lang:hover {

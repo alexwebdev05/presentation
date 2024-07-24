@@ -1,0 +1,36 @@
+#knowledgesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.knowledgesContent {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#designPhoto {
+    width: 5rem;
+}
+
+#designPhoto {
+    width: 10rem;
+}
+
+#contact{
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.margin-top {
+    margin-top: 0.6rem;
+}

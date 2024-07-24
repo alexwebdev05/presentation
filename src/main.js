@@ -1,14 +1,8 @@
-// scss
-import './assets/background.scss'
-import './assets/text.scss'
-import './assets/home.scss'
-import './assets/knowledges.scss'
-import './assets/contact.scss'
-import './assets/projects.scss'
+// Interactive bubble
+import './components/bubble.js'
+import './assets/styles/background.scss'
 
-// interactive bubble
-import './js/bubble.js'
-
+// Lenguage
 import i18n from './lang/i18n'
 
 import { createApp } from 'vue'

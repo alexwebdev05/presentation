@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: 'footerCollection',
+    name: 'myFooter',
     data() {
         return {
             language: this.$i18n.locale
@@ -22,14 +22,19 @@ export default {
 <style scoped>
 
 #footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 0;
+    margin-top: 5rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
 
-    width: 100%;
-    padding: 0.8rem 0;
-    background: linear-gradient(45deg, rgba(3, 49, 201, 0.4), rgba(17, 239, 255, 0.4));
+
+    
+    background: linear-gradient(45deg, var(--gradient-col1), var(--gradient-col2));
 }
 
 #text {

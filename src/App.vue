@@ -1,5 +1,67 @@
+<script>
+import axios from 'axios';
+
+// Components
+import lButton from './components/langButton.vue'
+import button from './components/button.vue'
+import card from './components/card.vue'
+import slider from './components/slider.vue'
+import myFooter from './components/footer.vue'
+import { sliderContent } from './components/index'
+  
+export default {
+  name: 'App',
+  data() {
+    return {
+      language: this.$i18n.locale,
+      sliderContent
+    }
+  },
+  components: {
+    LButton: lButton,
+    Button: button,
+    Card: card,
+    Slider: slider,
+    MyFooter: myFooter
+  },
+  methods: {
+    downloadPdf() {
+      axios({
+        method: 'get',
+        url: 'CV.pdf',
+        responseType: 'blob'
+      })
+      .then((response) => {
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'CV.pdf');
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }
+  }
+}
+
+// Styles
+import './assets/styles/me.css'
+import './assets/styles/projects.css'
+import './assets/styles/studies.css'
+import './assets/styles/knowledges.css'
+
+import './assets/styles/text.css'
+
+</script>
+
 <template>
-  <div id="content">
+  
+  <div id="contaier"  class="content">
 
     <!-- Background -->
     <section class="father-background">
@@ -23,178 +85,137 @@
     </section>
 
     <!-- Language -->
-    <langBlue @click="changeLang" style="z-index: 99;"></langBlue>
-
-    <!-- Home -->
-    <section id="home">
-      <article id="greeting-presentation-photo-cv">
-        <div id="greeting-presentation">
-          <h1 class="title1 underline shadowed-left resp-centered" v-t="'home.greeting'"></h1>
-          <p class="text1 bold shadowed-left resp-centered" v-t="'home.specialization'"></p>
-          <p class="text2 margin-top shadowed-left" v-t="'home.beautifulText'"></p>
+    <LButton></LButton>
+    
+    <!-- Me -->
+    <section id="meContainer">
+      <article>
+        <div>
+          <h2 v-t="'home.greeting'" class="title phone-center"></h2>
+          <h2 v-t="'home.specialization'" class="subtitle"></h2>
+          <p v-t="'home.beautifulText'"></p>
         </div>
-        <div id="photo-cv">
-          <img id="personalPhoto" class="shadowed-left" :src="$t('home.img')" alt="">
-          <buttonBlue @click="downloadPdf" class="text2 black-text" v-t="'home.cv'"></buttonBlue>
+        <div id="photoCv">
+          <img id="personalPhoto" :src="$t('home.img')" alt="">
+          <Button @click="downloadPdf" v-t="'home.cv'"></Button>
         </div>
       </article>
 
-      <article id="contact-buttons-about-me">
+      <div id="aboutMeContainer">
         <div id="contact-buttons">
-          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src="$t('contact.linkedin.img')" class="logo"><p v-t="'contact.linkedin.name'"></p></buttonBlue></a>
-          <a href="https://github.com/alexwebdev05" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
+          <a :href="$t('contact.linkedin.url')" target="_blank"><Button><img class="logoButton" :src="$t('contact.linkedin.img')"><p v-t="'contact.linkedin.name'"></p></Button></a>
+          <a :href="$t('contact.github.url')" target="_blank"><Button><img class="logoButton" :src="$t('contact.github.img')"><p v-t="'contact.github.name'"></p></Button></a>
         </div>
-        <div id="about-me">
-          <div id="divRight-content">
-            <h1 class="title2 underline2" v-t="'home.aboutMeTitle'"></h1>
-            <p class="text2 margin-top" v-t="'home.aboutMeText'"></p>
-          </div>
+
+        <div class="textContainer">
+          <h1 class="title2" v-t="'home.aboutMeTitle'"></h1>
+          <p v-t="'home.aboutMeText'"></p>
         </div>
-      </article>
-      <picture id="next" @click="scrollKnowledge">
-        👇
-      </picture>
+      </div>
     </section>
 
     <!-- Projects -->
-     <section id="projects">
-      <h1 class="title2 underline2 shadowed-left" v-t="'projects.title'"></h1>
+    <section id="projContainer">
+      <h1 class="title2" v-t="'projects.title'"></h1>
       <div>
-        <card :imagePath="projects.project1.path" :imageUrl="projects.project1.url" class="shadowed-left"></card>
-
+        <Card :imagePath="$t('projects.project1.path')" :imageUrl="$t('projects.project1.url')"></Card>
       </div>
-      
-     </section>
-
-    <!-- Knowledges -->
-    <section id="knowledges">
-      <h1 class="title2 underline2 shadowed-left" v-t="'knowledges.title'"></h1>
-      <article id="web-dev">
-        <div id="divRight-content">
-          <h1 class="title2 underline2" v-t="'knowledges.part1.title'"></h1>
-          <p class="text2" v-t="'knowledges.part1.text'"></p>
-        </div>
-        <sliderBlue :sliderContent="sliderContent.slider1" class="web-dev-slider-r shadowed-left"></sliderBlue>
-      </article>
-
-      <article id="networks">
-        <sliderBlue :sliderContent="sliderContent.slider2" class="web-dev-slider-l shadowed-left"></sliderBlue>
-        <div id="divRight-content">
-          <h1 class="title2 underline2" v-t="'knowledges.part2.title'"></h1>
-          <p class="text2" v-t="'knowledges.part2.text'"></p>
-        </div>
-      </article>
-      
-      <article id="design">
-        <div id="divRight-content">
-          <h1 class="title2 underline2" v-t="'knowledges.part3.title'"></h1>
-          <p class="text2" v-t="'knowledges.part3.text'"></p>
-        </div>
-        <img :src="$t('knowledges.part3.img')" alt="My design" id="mydesign" class="shadowed-left">
-      </article>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h1 class="title2 underline2 shadowed-left"></h1>
-      <div id="final-contact-buttons" class="margin-top">
+    <!-- Studies -->
+    <section id="studiesContainer">
+      <h1 class="title2" v-t="'studies.title'"></h1>
+      <div>
+        <p><span v-t="'studies.slot3.name'"></span><span v-t="'studies.slot3.center'"></span><span v-t="'studies.slot3.date'"></span></p>
+        <p><span v-t="'studies.slot2.name'"></span><span v-t="'studies.slot2.center'"></span><span v-t="'studies.slot2.date'"></span></p>
+        <p><span v-t="'studies.slot1.name'"></span><span v-t="'studies.slot1.center'"></span><span v-t="'studies.slot1.date'"></span></p>
+      </div>
+    </section>
 
+    <!-- Knowledges -->
+     <section id="knowledgesContainer">
+      <h1 class="title2" v-t="'knowledges.title'"></h1>
+      <div class="knowledgesContent">
+        <div class="textContainer">
+          <h1 class="title2" v-t="'knowledges.part1.title'"></h1>
+          <p v-t="'knowledges.part1.text'"></p>
+        </div>
+        <Slider :sliderContent="sliderContent.slider1"  class="web-dev-slider-r shadowed-left" />
+      </div>
+
+      <div class="knowledgesContent phone-rev">
+        <Slider :sliderContent="sliderContent.slider2"  class="web-dev-slider-r shadowed-left" />
+        <div class="textContainer">
+          <h1 class="title2" v-t="'knowledges.part2.title'"></h1>
+          <p v-t="'knowledges.part2.text'"></p>
+        </div>
+      </div>
+
+      <div class="knowledgesContent">
+        <div class="textContainer">
+          <h1 class="title2" v-t="'knowledges.part3.title'"></h1>
+          <p v-t="'knowledges.part3.text'"></p>
+        </div>
+        <Slider :sliderContent="sliderContent.slider3"  class="web-dev-slider-r shadowed-left" />
+      </div>
+     </section>
+
+     <!-- Contact -->
+    <section>
+      <div id="contact">
         <section class="cont-sections">
-          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><buttonBlue  class="text2 black-text"><img :src="$t('contact.linkedin.img')" class="logo"><p v-t="'contact.linkedin.name'"></p></buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left" v-t="'contact.linkedin.contName'"></p>
+          <a href="https://linkedin.com/in/álex-frías-angulo-34b1b3271" target="_blank"><Button><img class="logoButton" :src="$t('contact.linkedin.img')"><p v-t="'contact.linkedin.name'"></p></Button></a>
+          <p class="margin-top" v-t="'contact.linkedin.contName'"></p>
         </section>
           
         <section class="cont-sections">
-          <a href="https://github.com/alexwebdev05" target="_blank" class="text2 black-text"><buttonBlue class="text2 black-text"><img :src="$t('contact.github.img')" class="logo"><p v-t="'contact.github.name'"></p></buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left" v-t="'contact.github.contName'"></p>
+          <a href="https://github.com/alexwebdev05" target="_blank" class="text2 black-text"><Button><img class="logoButton" :src="$t('contact.github.img')"><p v-t="'contact.github.name'"></p></Button></a>
+          <p class="margin-top" v-t="'contact.github.contName'"></p>
         </section>
 
         <section class="cont-sections">
-          <a @click="copy"><buttonBlue class="text2 black-text"><img class="logo" :src="$t('contact.mail.img')"><p v-t="'contact.mail.name'"></p></buttonBlue></a>
-          <p class="text2 black-text margin-top shadowed-left" v-t="'contact.mail.contName'"></p>
+          <a><Button><img class="logoButton" :src="$t('contact.mail.img')"><p v-t="'contact.mail.name'"></p></Button></a>
+          <p class="margin-top" v-t="'contact.mail.contName'"></p>
         </section>
         
       </div>
     </section>
 
-    <!-- Footer -->
-    <footerBlue v-t="'footer.text'"></footerBlue>
+     <!-- Footer -->
+     <MyFooter v-t="'footer.text'"></MyFooter>
 
   </div>
+
 </template>
 
-<script>
-
-// Objects
-import { components } from './components/index'
-
-// Methods
-import { scrollKnowledge, copy, downloadPdf, changeLang } from './js/methods'
-
-// Sliders
-import { sliderContent } from './components/index'
-import { messages } from './lang/languages';
-
-export default {
-  name: 'App',
-  data() {
-    return {
-      language: this.$i18n.locale,
-      sliderContent,
-      projects: messages.es.projects
-    }
-  },
-  components: {
-    buttonBlue: components.buttonCollection,
-    sliderBlue: components.sliderCollection,
-    footerBlue: components.footerCollection,
-    langBlue: components.langCollection,
-    card: components.Card
-  },
-  methods: {
-    scrollKnowledge,
-    copy,
-    downloadPdf,
-    changeLang
-  }
-}
-
-</script>
-
 <style>
+
+:root {
+  /* Containers gradient */
+  --gradient-col1: rgba(3, 49, 201, 0.4);
+  --gradient-col2: rgba(17, 239, 255, 0.4);
+
+  /* Text */
+  --text-color: white;
+  --underline-col1: rgb(0, 17, 255);
+  --underline-col2: rgb(184, 0, 201);
+
+  /* Other */
+  --shadow: rgb(0, 0, 0, 0.5);
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-}
-
-#content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#divRight-content {
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: linear-gradient(45deg, rgba(3, 49, 201, 0.4), rgba(17, 239, 255, 0.4)) ;
-    filter: drop-shadow(-6px 10px 5px rgba(0, 0, 0, 0.5));
-}
-
-.logo {
-  height: 2rem;
-  margin-right: 0.5rem;
-}
-
-@media screen and (max-width: 920px) {
-  .logo {
-    height: 1.5rem;
-  }
 }
 
 /* Scrollbar */
@@ -203,13 +224,126 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #191724; /* color del track */
+  background: #191724;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #515268; /* color del thumb */
+  background-color: #515268;
   border-radius: 20px;
-  border: 3px solid #272435; /* crea un padding alrededor del thumb */
+  border: 3px solid #272435;
+}
+
+#app {
+  margin: 0 25rem;
+  display: flex;
+  justify-content: center
+}
+
+#contaier {
+  
+  max-width: 60rem;
+}
+
+/* .content {
+  background-color: rgb(128, 128, 128, 0.1);
+} */
+
+.logoButton {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.textContainer {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(45deg, var(--gradient-col1), var(--gradient-col2)) ;
+  filter: drop-shadow(-6px 10px 5px var(--shadow));
+
+  flex: 0.55;
+}
+/* big screen */
+
+
+/* Small screens */
+@media (max-width: 1450px) {
+  #app {
+    margin: 0 15rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  #app {
+    margin: 0 10rem;
+  }
+}
+
+@media (max-width: 980px) {
+  #app {
+    margin: 0 3rem;
+  }
+}
+
+/* Phone */
+@media (max-width: 750px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .title2 {
+    font-size: 1.5rem;
+  }
+
+  #meContainer article {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .phone-center {
+    width: 100%;
+  }
+
+  #personalPhoto {
+    width: 10rem;
+  }
+
+  #contact-buttons {
+    display: none;
+  }
+
+  #aboutMeContainer {
+    display: contents;
+    justify-content: center
+  }
+
+  .knowledgesContent {
+    flex-direction: column;
+  }
+
+  .phone-rev {
+    flex-direction: column-reverse;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+
+  .margin-top {
+    margin: 0.5rem 0 2rem 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
 }
 
 </style>

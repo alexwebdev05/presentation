@@ -2,6 +2,7 @@ import { images } from '../components'
 
 export const messages = {
   es: {
+    name: 'ES',
     home: {
       greeting: "¡Hola! Soy Álex",
       specialization: "{'<'}Desarrollo web, cloud, redes y sistemas{'/>'}",
@@ -17,6 +18,24 @@ export const messages = {
         name: '3dForniture',
         path: 'project1.png',
         url: 'https://994ca11c.3dforniture.pages.dev/'
+      }
+    },
+    studies: {
+      title: 'Estudios',
+      slot1: {
+        name: 'Educación secundaria',
+        center: 'Uribe-Kosta BHI',
+        date: '2017-2021',
+      },
+      slot2: {
+        name: 'Preimpresión digital',
+        center: 'Emilio Campuzano',
+        date: '2021-2023'
+      },
+      slot3: {
+        name: 'ASIR',
+        center: 'Almi',
+        date: '2023-En curso'
       }
     },
     knowledges: {
@@ -40,12 +59,14 @@ export const messages = {
       linkedin: {
         name: "Linkedin",
         contName: 'Álex Frías Angulo',
-        img: images.linkedinLogo
+        img: images.linkedinLogo,
+        url: 'https://linkedin.com/in/álex-frías-angulo-34b1b3271'
       },
       github: {
         name: "GitHub",
         contName: 'alexwebdev05',
-        img: images.githubLogo
+        img: images.githubLogo,
+        url: 'https://github.com/alexwebdev05'
       },
       mail: {
         name: "Email",
@@ -58,6 +79,7 @@ export const messages = {
     },
   },
   en: {
+    name: 'EN',
     home: {
       greeting: "¡Hello! I'm Álex",
       specialization: `{'<'}Web development, cloud, networks and systems{'/>'}`,
@@ -71,9 +93,27 @@ export const messages = {
       title: 'Projects',
       project1: {
         name: '3dForniture',
-        path: '../assets/media/project1.png',
+        path: 'project1.png',
         url: 'https://994ca11c.3dforniture.pages.dev/'
+      }
+    },
+    studies: {
+      title: 'Studies',
+      slot1: {
+        name: 'Secundary education',
+        center: 'Uribe-Kosta BHI',
+        date: '2017-2021',
       },
+      slot2: {
+        name: 'Digital prepress',
+        center: 'Emilio Campuzano',
+        date: '2021-2023'
+      },
+      slot3: {
+        name: 'ASIR',
+        center: 'Almi',
+        date: '2023-Studying'
+      }
     },
     knowledges: {
       title: "Knowledges",
@@ -96,12 +136,14 @@ export const messages = {
       linkedin: {
         name: "Linkedin",
         contName: "Álex Frías Angulo",
-        img: images.linkedinLogo
+        img: images.linkedinLogo,
+        url: 'https://linkedin.com/in/álex-frías-angulo-34b1b3271'
       },
       github: {
         name: "GitHub",
         contName: "alexwebdev05",
-        img: images.githubLogo
+        img: images.githubLogo,
+        url: 'https://github.com/alexwebdev05'
       },
       mail: {
         name: "Email",

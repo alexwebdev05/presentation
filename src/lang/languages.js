@@ -98,8 +98,13 @@ export const messages = {
       title: 'Projects',
       project1: {
         name: '3dForniture',
-        path: 'project1.png',
+        path: 'media/project1.png',
         url: 'https://994ca11c.3dforniture.pages.dev/'
+      },
+      project2: {
+        name: 'WebPharmacy',
+        path: 'media/project2.png',
+        url: 'https://275b573d.pharmacyweb.pages.dev/'
       }
     },
     studies: {

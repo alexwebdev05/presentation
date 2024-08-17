@@ -42,14 +42,18 @@ import sliderCollection from "./slider.vue"
 import buttonCollection from "./button.vue"
 import footerCollection from './/footer.vue'
 import langCollection from './langButton.vue'
-import Card from './card.vue'
+import lButton from './langButton.vue'
+import card from './card.vue'
+import studyCard from './studyCard.vue'
 
 export const components = {
     sliderCollection: sliderCollection,
     buttonCollection: buttonCollection,
     footerCollection: footerCollection,
     langCollection: langCollection,
-    Card: Card
+    lButton: lButton,
+    card: card,
+    studyCard: studyCard
 }
 
 // Slider content

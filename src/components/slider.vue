@@ -4,8 +4,8 @@ export default {
     name: 'slider',
     props: {
         sliderContent: {
-        type: Array,
-        required: true
+            type: Array,
+            required: true
         }
     },
     mounted() {

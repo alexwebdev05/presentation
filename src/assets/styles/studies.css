@@ -10,3 +10,11 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+@media (max-width: 750px) {
+
+    #studiesContainer div {
+        flex-direction: column;
+    }
+
+}

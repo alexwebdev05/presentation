@@ -27,6 +27,11 @@ export const messages = {
     },
     studies: {
       title: 'Estudios',
+      info: [
+        { qualification: 'Titulación' },
+        { school: 'Centro' },
+        { date: 'Fecha' }
+      ],
       slot1: {
         name: 'Educación secundaria',
         center: 'Uribe-Kosta BHI',
@@ -109,6 +114,11 @@ export const messages = {
     },
     studies: {
       title: 'Studies',
+      info: {
+        qualification: 'Qualification',
+        school: 'School',
+        date: 'Date'
+      },
       slot1: {
         name: 'Secundary education',
         center: 'Uribe-Kosta BHI',

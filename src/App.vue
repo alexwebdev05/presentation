@@ -2,13 +2,9 @@
 import axios from 'axios';
 
 // Components
-import lButton from './components/langButton.vue'
-import button from './components/button.vue'
-import card from './components/card.vue'
-import slider from './components/slider.vue'
-import myFooter from './components/footer.vue'
+import { components } from './components/index.js'
 import { sliderContent } from './components/index'
-  
+
 export default {
   name: 'App',
   data() {
@@ -18,11 +14,12 @@ export default {
     }
   },
   components: {
-    LButton: lButton,
-    Button: button,
-    Card: card,
-    Slider: slider,
-    MyFooter: myFooter
+    LButton: components.lButton,
+    Button: components.buttonCollection,
+    Card: components.card,
+    Slider: components.sliderCollection,
+    MyFooter: components.footerCollection,
+    StudyCard: components.studyCard
   },
   methods: {
     downloadPdf() {
@@ -118,8 +115,8 @@ import './assets/styles/text.css'
     <section id="projContainer">
       <h1 class="title2" v-t="'projects.title'"></h1>
       <div>
-        <Card :imagePath="$t('projects.project1.path')" :imageUrl="$t('projects.project1.url')"></Card>
-        <Card :imagePath="$t('projects.project2.path')" :imageUrl="$t('projects.project2.url')"></Card>
+        <Card :imagePath="$t('projects.project1.path')" :imageUrl="$t('projects.project1.url')" />
+        <Card :imagePath="$t('projects.project2.path')" :imageUrl="$t('projects.project2.url')" />
       </div>
     </section>
 
@@ -127,9 +124,9 @@ import './assets/styles/text.css'
     <section id="studiesContainer">
       <h1 class="title2" v-t="'studies.title'"></h1>
       <div>
-        <p><span v-t="'studies.slot3.name'"></span><span v-t="'studies.slot3.center'"></span><span v-t="'studies.slot3.date'"></span></p>
-        <p><span v-t="'studies.slot2.name'"></span><span v-t="'studies.slot2.center'"></span><span v-t="'studies.slot2.date'"></span></p>
-        <p><span v-t="'studies.slot1.name'"></span><span v-t="'studies.slot1.center'"></span><span v-t="'studies.slot1.date'"></span></p>
+        <StudyCard :cardContent="'studies.slot3'"/>
+        <StudyCard :cardContent="'studies.slot2'"/>
+        <StudyCard :cardContent="'studies.slot1'"/>
       </div>
     </section>
 
@@ -245,10 +242,6 @@ a {
   max-width: 60rem;
 }
 
-/* .content {
-  background-color: rgb(128, 128, 128, 0.1);
-} */
-
 .logoButton {
   width: 1.5rem;
   margin-right: 0.5rem;
@@ -257,13 +250,11 @@ a {
 .textContainer {
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background: linear-gradient(45deg, var(--gradient-col1), var(--gradient-col2)) ;
+  background: linear-gradient(45deg, var(--gradient-col1), var(--gradient-col2));
   filter: drop-shadow(-6px 10px 5px var(--shadow));
 
   flex: 0.55;
 }
-/* big screen */
-
 
 /* Small screens */
 @media (max-width: 1450px) {
@@ -314,6 +305,10 @@ a {
   #aboutMeContainer {
     display: contents;
     justify-content: center
+  }
+
+  .textContainer {
+    flex: none;
   }
 
   .knowledgesContent {

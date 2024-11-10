@@ -27,11 +27,11 @@ export const messages = {
     },
     studies: {
       title: 'Estudios',
-      info: [
-        { qualification: 'Titulación' },
-        { school: 'Centro' },
-        { date: 'Fecha' }
-      ],
+      info: {
+        qualification: 'Titulación',
+        school: 'Centro',
+        date: 'Fecha'
+      },
       slot1: {
         name: 'Educación secundaria',
         center: 'Uribe-Kosta BHI',

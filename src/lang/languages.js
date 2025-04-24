@@ -23,6 +23,11 @@ export const messages = {
         name: 'WebPharmacy',
         path: 'media/project2.png',
         url: 'https://275b573d.pharmacyweb.pages.dev/'
+      },
+      project3: {
+        name: 'SSChat',
+        path: 'media/project3.png',
+        url: 'https://275b573d.pharmacyweb.pages.dev/'
       }
     },
     studies: {
@@ -109,6 +114,11 @@ export const messages = {
       project2: {
         name: 'WebPharmacy',
         path: 'media/project2.png',
+        url: 'https://275b573d.pharmacyweb.pages.dev/'
+      },
+      project3: {
+        name: 'SSChat',
+        path: 'media/project3.png',
         url: 'https://275b573d.pharmacyweb.pages.dev/'
       }
     },

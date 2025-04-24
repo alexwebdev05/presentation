@@ -117,6 +117,7 @@ import './assets/styles/text.css'
       <div>
         <Card :imagePath="$t('projects.project1.path')" :imageUrl="$t('projects.project1.url')" />
         <Card :imagePath="$t('projects.project2.path')" :imageUrl="$t('projects.project2.url')" />
+        <Card :imagePath="$t('projects.project3.path')" />
       </div>
     </section>
 

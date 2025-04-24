@@ -27,7 +27,7 @@ export const messages = {
       project3: {
         name: 'SSChat',
         path: 'media/project3.png',
-        url: 'https://275b573d.pharmacyweb.pages.dev/'
+        url: 'https://sschat-web-production.up.railway.app'
       }
     },
     studies: {
@@ -119,7 +119,7 @@ export const messages = {
       project3: {
         name: 'SSChat',
         path: 'media/project3.png',
-        url: 'https://275b573d.pharmacyweb.pages.dev/'
+        url: 'https://sschat-web-production.up.railway.app'
       }
     },
     studies: {
